@@ -279,5 +279,5 @@ open .
 ---
 
 ## 👤 Autor
-Guía elaborada como práctica personal para ayudar a principiantes y mostrar capacidades en experiencia de usuario y documentación clara.  
-Contacto: **ejemplo@correo.com**
+Guía elaborada por Patricio Moreno como práctica personal para ayudar a principiantes y mostrar capacidades en experiencia de usuario y documentación clara.  
+Contacto: **tysontecles@correo.com**
