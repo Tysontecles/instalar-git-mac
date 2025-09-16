@@ -99,13 +99,15 @@ which git   # Debe mostrar /opt/homebrew/bin/git
 Esto es la "firma" que quedará en tus commits (cambios) y se verá en el historial.
 
 ```bash
-git config --global user.name "Patricio Nicasio Moreno Brevis"
-git config --global user.email "tysontecles@gmail.com"
+git config --global user.name "Escribe Tu Nombre"
+git config --global user.email "ejemplo@correo.com"
 ```
 
-**Recomendación:** usa tu **nombre real** para que en equipos sepan quién hizo qué, y un **correo registrado en tu cuenta de GitHub** para que tus commits se asocien a tu perfil.
+**Importante:**  
+- Sustituye **Escribe Tu Nombre** por tu nombre real o el nombre con el que quieras aparecer en tus commits.  
+- Sustituye **ejemplo@correo.com** por el correo que tengas registrado en tu cuenta de GitHub.  
 
-Verifica:
+Verifica tu configuración con:
 ```bash
 git config --list
 ```
@@ -117,8 +119,9 @@ git config --list
 - Generas un **par de llaves**: una **privada** (se queda en tu Mac) y una **pública** (la registras en GitHub). GitHub confía en tu Mac cuando la llave coincide.
 
 ### Generar tu llave SSH (ed25519)
+Ejecuta este comando en la Terminal, pero **recuerda sustituir** el correo por el tuyo en GitHub:
 ```bash
-ssh-keygen -t ed25519 -C "tysontecles@gmail.com"
+ssh-keygen -t ed25519 -C "ejemplo@correo.com"
 ```
 
 - Cuando pregunte la ruta, presiona **Enter** para usar la predeterminada: `~/.ssh/id_ed25519`.
@@ -137,9 +140,10 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 ### Registrar la llave en GitHub
 1. Ve a **GitHub** → **Settings** → **SSH and GPG keys** → **New SSH key**.
-2. **Title**: un nombre descriptivo para identificar el equipo (solo lo ves tú). Ejemplos: `MacBook Air M1`, `MacBook de Patricio`.
+2. **Title**: un nombre descriptivo para identificar el equipo (solo lo ves tú). Ejemplos: `Mi MacBook Air`, `Computadora de Casa`.
 3. **Key type**: deja **Authentication Key**.
-4. **Key**: pega lo que copiaste (empieza con `ssh-ed25519 AAAA...`).
+4. **Key**: pega lo que copiaste (empieza con `ssh-ed25519 AAAA...`).  
+   👉 Aquí no hay que modificar nada, solo pegar el valor que copiaste.  
 5. Guarda con **Add SSH key**.
 
 ### Probar la conexión SSH
@@ -149,7 +153,7 @@ ssh -T git@github.com
 - La primera vez puede preguntar: `Are you sure you want to continue connecting (yes/no/[fingerprint])?` → escribe **yes** y Enter.
 - Deberías ver: `Hi <tu_usuario>! You've successfully authenticated, but GitHub does not provide shell access.` ✅
 
-> **No necesitas cambiar la SSH key** si cambias tu `user.name`/`user.email`. La llave identifica **tu equipo**, no tu nombre visible en los commits.
+> **Importante:** No necesitas cambiar la SSH key si modificas tu `user.name` o `user.email`. La llave identifica **tu equipo**, no tu nombre visible en los commits.
 
 ---
 
@@ -264,9 +268,9 @@ open .
   ```
 - **No sé qué rama principal usa mi repo**:
   ```bash
-  git branch -a   # mira si es main o master
+  git branch -a
   ```
-- **Quiero cambiar mi nombre/correo para un solo repo** (local, no global):
+- **Quiero cambiar mi nombre/correo solo en un repo específico (no global)**:
   ```bash
   git config user.name "Otro Nombre"
   git config user.email "otro@correo.com"
@@ -274,8 +278,6 @@ open .
 
 ---
 
-## ✨ Autor
-Guía escrita por **Patricio Nicasio Moreno Brevis**.  
-📧 Contacto: **tysontecles@gmail.com**  
-
-La comparto porque sé lo difícil que puede ser comenzar sin experiencia previa. Si esta guía te ayudó y quieres colaborar conmigo en proyectos donde la **experiencia de usuario clara y detallada** sea importante, no dudes en escribirme 🙌
+## 👤 Autor
+Guía elaborada como práctica personal para ayudar a principiantes y mostrar capacidades en experiencia de usuario y documentación clara.  
+Contacto: **ejemplo@correo.com**
